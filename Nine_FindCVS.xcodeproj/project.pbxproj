@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		343DF715292B7CCF0072702D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343DF714292B7CCF0072702D /* AppDelegate.swift */; };
+		343DF717292B7CCF0072702D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343DF716292B7CCF0072702D /* SceneDelegate.swift */; };
+		343DF719292B7CCF0072702D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343DF718292B7CCF0072702D /* ViewController.swift */; };
+		343DF71E292B7CD10072702D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 343DF71D292B7CD10072702D /* Assets.xcassets */; };
+		343DF721292B7CD10072702D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 343DF71F292B7CD10072702D /* LaunchScreen.storyboard */; };
+		343DF76E292B821E0072702D /* DaumMap.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = 343DF76D292B821D0072702D /* DaumMap.embeddedframework */; };
+		343DF772292B82D10072702D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DF771292B82D10072702D /* OpenGLES.framework */; };
+		343DF774292B82DD0072702D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DF773292B82DD0072702D /* SystemConfiguration.framework */; };
+		343DF776292B82E90072702D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DF775292B82E90072702D /* QuartzCore.framework */; };
+		343DF779292B832E0072702D /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DF778292B832E0072702D /* DaumMap.framework */; };
+		343DF77B292B83390072702D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DF77A292B83390072702D /* CoreLocation.framework */; };
+		343DF77D292B83490072702D /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DF77C292B83480072702D /* libxml2.tbd */; };
+		343DF77F292B83510072702D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DF77E292B83510072702D /* libsqlite3.tbd */; };
+		343DF781292B835A0072702D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DF780292B835A0072702D /* libc++.tbd */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		343DF747292B81590072702D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		343DF711292B7CCF0072702D /* Nine_FindCVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nine_FindCVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		343DF714292B7CCF0072702D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		343DF716292B7CCF0072702D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		343DF718292B7CCF0072702D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		343DF71D292B7CD10072702D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		343DF720292B7CD10072702D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		343DF722292B7CD10072702D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		343DF76D292B821D0072702D /* DaumMap.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = file; path = DaumMap.embeddedframework; sourceTree = SOURCE_ROOT; };
+		343DF76F292B825C0072702D /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		343DF771292B82D10072702D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		343DF773292B82DD0072702D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		343DF775292B82E90072702D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		343DF778292B832E0072702D /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumMap.framework; path = DaumMap.embeddedframework/DaumMap.framework; sourceTree = "<group>"; };
+		343DF77A292B83390072702D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		343DF77C292B83480072702D /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		343DF77E292B83510072702D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		343DF780292B835A0072702D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		343DF70E292B7CCF0072702D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				343DF781292B835A0072702D /* libc++.tbd in Frameworks */,
+				343DF77F292B83510072702D /* libsqlite3.tbd in Frameworks */,
+				343DF77D292B83490072702D /* libxml2.tbd in Frameworks */,
+				343DF77B292B83390072702D /* CoreLocation.framework in Frameworks */,
+				343DF779292B832E0072702D /* DaumMap.framework in Frameworks */,
+				343DF776292B82E90072702D /* QuartzCore.framework in Frameworks */,
+				343DF774292B82DD0072702D /* SystemConfiguration.framework in Frameworks */,
+				343DF772292B82D10072702D /* OpenGLES.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		343DF708292B7CCE0072702D = {
+			isa = PBXGroup;
+			children = (
+				343DF713292B7CCF0072702D /* Nine_FindCVS */,
+				343DF712292B7CCF0072702D /* Products */,
+				343DF770292B82D10072702D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		343DF712292B7CCF0072702D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				343DF711292B7CCF0072702D /* Nine_FindCVS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		343DF713292B7CCF0072702D /* Nine_FindCVS */ = {
+			isa = PBXGroup;
+			children = (
+				343DF76F292B825C0072702D /* BridgingHeader.h */,
+				343DF714292B7CCF0072702D /* AppDelegate.swift */,
+				343DF716292B7CCF0072702D /* SceneDelegate.swift */,
+				343DF718292B7CCF0072702D /* ViewController.swift */,
+				343DF71D292B7CD10072702D /* Assets.xcassets */,
+				343DF71F292B7CD10072702D /* LaunchScreen.storyboard */,
+				343DF722292B7CD10072702D /* Info.plist */,
+			);
+			path = Nine_FindCVS;
+			sourceTree = "<group>";
+		};
+		343DF770292B82D10072702D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				343DF76D292B821D0072702D /* DaumMap.embeddedframework */,
+				343DF780292B835A0072702D /* libc++.tbd */,
+				343DF77E292B83510072702D /* libsqlite3.tbd */,
+				343DF77C292B83480072702D /* libxml2.tbd */,
+				343DF77A292B83390072702D /* CoreLocation.framework */,
+				343DF778292B832E0072702D /* DaumMap.framework */,
+				343DF775292B82E90072702D /* QuartzCore.framework */,
+				343DF773292B82DD0072702D /* SystemConfiguration.framework */,
+				343DF771292B82D10072702D /* OpenGLES.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		343DF710292B7CCF0072702D /* Nine_FindCVS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 343DF725292B7CD10072702D /* Build configuration list for PBXNativeTarget "Nine_FindCVS" */;
+			buildPhases = (
+				343DF70D292B7CCF0072702D /* Sources */,
+				343DF70E292B7CCF0072702D /* Frameworks */,
+				343DF70F292B7CCF0072702D /* Resources */,
+				343DF747292B81590072702D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nine_FindCVS;
+			productName = Nine_FindCVS;
+			productReference = 343DF711292B7CCF0072702D /* Nine_FindCVS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		343DF709292B7CCE0072702D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					343DF710292B7CCF0072702D = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 343DF70C292B7CCE0072702D /* Build configuration list for PBXProject "Nine_FindCVS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 343DF708292B7CCE0072702D;
+			productRefGroup = 343DF712292B7CCF0072702D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				343DF710292B7CCF0072702D /* Nine_FindCVS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		343DF70F292B7CCF0072702D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				343DF76E292B821E0072702D /* DaumMap.embeddedframework in Resources */,
+				343DF721292B7CD10072702D /* LaunchScreen.storyboard in Resources */,
+				343DF71E292B7CD10072702D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		343DF70D292B7CCF0072702D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				343DF719292B7CCF0072702D /* ViewController.swift in Sources */,
+				343DF715292B7CCF0072702D /* AppDelegate.swift in Sources */,
+				343DF717292B7CCF0072702D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		343DF71F292B7CD10072702D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				343DF720292B7CD10072702D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		343DF723292B7CD10072702D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		343DF724292B7CD10072702D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		343DF726292B7CD10072702D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6V8879W55Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nine_FindCVS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yslee.nine-findcvs";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/yslee/Desktop/Swift_fast/Project_4/Nine_FindCVS/Nine_FindCVS/BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		343DF727292B7CD10072702D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6V8879W55Z;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Nine_FindCVS/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yslee.nine-findcvs";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/yslee/Desktop/Swift_fast/Project_4/Nine_FindCVS/Nine_FindCVS/BridgingHeader.h;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		343DF70C292B7CCE0072702D /* Build configuration list for PBXProject "Nine_FindCVS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				343DF723292B7CD10072702D /* Debug */,
+				343DF724292B7CD10072702D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		343DF725292B7CD10072702D /* Build configuration list for PBXNativeTarget "Nine_FindCVS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				343DF726292B7CD10072702D /* Debug */,
+				343DF727292B7CD10072702D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 343DF709292B7CCE0072702D /* Project object */;
+}
