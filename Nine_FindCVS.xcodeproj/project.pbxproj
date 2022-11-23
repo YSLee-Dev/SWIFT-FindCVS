@@ -34,6 +34,9 @@
 		343DF79E292CCA790072702D /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 343DF79D292CCA790072702D /* RxTest */; };
 		343DF7A0292CD0A00072702D /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343DF79F292CD0A00072702D /* MTMapViewError.swift */; };
 		343DF7A2292CD9100072702D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DF7A1292CD9100072702D /* XCTest.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		34BAF9C9292E1A3A00658FEB /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9C8292E1A3A00658FEB /* DetailListCell.swift */; };
+		34BAF9CB292E1BFF00658FEB /* DetailListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9CA292E1BFF00658FEB /* DetailListBackgroundView.swift */; };
+		34BAF9CD292E1C0D00658FEB /* DetailListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9CC292E1C0D00658FEB /* DetailListBackgroundViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,7 +59,7 @@
 		343DF71D292B7CD10072702D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		343DF720292B7CD10072702D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		343DF722292B7CD10072702D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		343DF76D292B821D0072702D /* DaumMap.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = file; path = DaumMap.embeddedframework; sourceTree = SOURCE_ROOT; };
+		343DF76D292B821D0072702D /* DaumMap.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DaumMap.embeddedframework; sourceTree = SOURCE_ROOT; };
 		343DF76F292B825C0072702D /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		343DF771292B82D10072702D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		343DF773292B82DD0072702D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -73,6 +76,9 @@
 		343DF78C292CC9E20072702D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		343DF79F292CD0A00072702D /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
 		343DF7A1292CD9100072702D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		34BAF9C8292E1A3A00658FEB /* DetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCell.swift; sourceTree = "<group>"; };
+		34BAF9CA292E1BFF00658FEB /* DetailListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundView.swift; sourceTree = "<group>"; };
+		34BAF9CC292E1C0D00658FEB /* DetailListBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,9 @@
 			children = (
 				343DF789292CC97C0072702D /* MainVC.swift */,
 				343DF78C292CC9E20072702D /* MainViewModel.swift */,
+				34BAF9C8292E1A3A00658FEB /* DetailListCell.swift */,
+				34BAF9CA292E1BFF00658FEB /* DetailListBackgroundView.swift */,
+				34BAF9CC292E1C0D00658FEB /* DetailListBackgroundViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -258,9 +267,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				343DF78D292CC9E20072702D /* MainViewModel.swift in Sources */,
+				34BAF9CB292E1BFF00658FEB /* DetailListBackgroundView.swift in Sources */,
+				34BAF9CD292E1C0D00658FEB /* DetailListBackgroundViewModel.swift in Sources */,
 				343DF788292CC9080072702D /* DetailListCellData.swift in Sources */,
 				343DF78A292CC97C0072702D /* MainVC.swift in Sources */,
 				343DF7A0292CD0A00072702D /* MTMapViewError.swift in Sources */,
+				34BAF9C9292E1A3A00658FEB /* DetailListCell.swift in Sources */,
 				343DF783292CC7DC0072702D /* LocationData.swift in Sources */,
 				343DF786292CC84E0072702D /* KLDocument.swift in Sources */,
 				343DF715292B7CCF0072702D /* AppDelegate.swift in Sources */,

@@ -25,7 +25,12 @@ class MainVC : UIViewController{
         $0.backgroundColor = .white
         $0.layer.cornerRadius = 20
     }
-    let detailList = UITableView()
+    lazy var detailList = UITableView().then{
+        $0.register(DetailListCell.self, forCellReuseIdentifier: "DetailListCell")
+        $0.separatorStyle = .none
+        $0.backgroundView = self.deatilListBackgroundView
+    }
+    let deatilListBackgroundView = DetailListBackgroundView()
     
     let viewModel = MainViewModel()
     
@@ -38,16 +43,53 @@ class MainVC : UIViewController{
 
 extension MainVC{
     private func bind(viewModel : MainViewModel){
+        self.deatilListBackgroundView.bind(viewModel: viewModel.detailListBackgroundViewModel)
+        
+        // VIEW -> VIEWMODEL
         self.currentLocationBtn.rx.tap
             .bind(to: viewModel.currentLocationBtnClick)
             .disposed(by: self.bag)
         
+        self.detailList.rx.itemSelected
+            .map{
+                $0.row
+            }
+            .bind(to: viewModel.detailListCellClick)
+            .disposed(by: self.bag)
+        
+        // VIEWMODEL -> VIEW
         viewModel.setMapCenter
             .emit(to: self.mapView.rx.setMapCenterPoint)
             .disposed(by: self.bag)
-        
+    
         viewModel.errorMsg
             .emit(to: self.rx.alertPresent)
+            .disposed(by: self.bag)
+        
+        // 전달받은 데이터를 list에 표시
+        viewModel.detailListCellData
+            .drive(self.detailList.rx.items){ tv, row, data in
+                guard let cell = tv.dequeueReusableCell(withIdentifier: "DetailListCell", for: IndexPath(row: row, section: 0)) as? DetailListCell else {return UITableViewCell()}
+                cell.placeName.text = data.placeName
+                cell.address.text = data.address
+                cell.distance.text = data.distance
+                
+                return cell
+            }
+            .disposed(by: self.bag)
+        
+        // 전달받은 데이터를 MAP에 PIN으로 표시
+        viewModel.detailListCellData
+            .map{
+                $0.compactMap{
+                    $0.point
+                }
+            }
+            .drive(self.rx.addPOIItems)
+            .disposed(by: self.bag)
+        
+        viewModel.scrollToSeletedLocation
+            .emit(to: self.rx.showSeletedLocation)
             .disposed(by: self.bag)
     }
     
@@ -137,6 +179,30 @@ extension Reactive where Base : MainVC{
             let alert = UIAlertController(title: "에러", message: msg, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "확인", style: .cancel))
             base.present(alert, animated: true)
+        }
+    }
+    
+    var showSeletedLocation : Binder<Int>{
+        return Binder(base){base, row in
+            base.detailList.selectRow(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .top)
+        }
+    }
+    
+    var addPOIItems : Binder<[MTMapPoint]>{
+        return Binder(base){base, points in
+            let items = points
+                .enumerated()
+                .map{ index, point -> MTMapPOIItem in
+                    let POIItem = MTMapPOIItem()
+                    POIItem.mapPoint = point
+                    POIItem.markerType = .bluePin
+                    POIItem.showAnimationType = .springFromGround
+                    POIItem.tag = index
+                    
+                    return POIItem
+                }
+            base.mapView.removeAllPOIItems()
+            base.mapView.addPOIItems(items)
         }
     }
 }
