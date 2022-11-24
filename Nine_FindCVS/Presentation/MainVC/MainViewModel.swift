@@ -31,17 +31,47 @@ struct MainViewModel{
     // BAG
     let bag = DisposeBag()
     
-    let documentData = PublishRelay<[KLDocument]>()
+    private let documentData = PublishRelay<[KLDocument]>()
     
-    init(){
+    init(model : MainModel = .init()){
+        // 네트워크 통신 후 데이터 return
+        let cvsLocationDataResult = mapCenterPoint
+            .flatMapLatest(model.getLocation)
+            .share()
+        
+        let cvsLocationDataValue = cvsLocationDataResult
+            .compactMap{data -> LocationData? in
+                guard case let .success(value) = data else {return nil}
+                return value
+            }
+        
+        let cvsLocationDataErrorMsg =  cvsLocationDataResult
+            .compactMap{data -> String? in
+                switch data{
+                case let .success(value) where value.documents.isEmpty:
+                    return "500M 근처에는 편의점이 없습니다."
+                case let .failure(error) :
+                    return error.localizedDescription
+                default:
+                    return nil
+                }
+            }
+        
+        cvsLocationDataValue
+            .map{
+                $0.documents
+            }
+            .bind(to: self.documentData)
+            .disposed(by: self.bag)
+        
         // 지도의 센터 설정
         let selectDetailListItem = self.detailListCellClick
             .withLatestFrom(self.documentData){
                 $1[$0]
             }
             .map{ data -> MTMapPoint in
-                guard let longtitue = Double(data.x),
-                      let latitude = Double(data.y) else{
+                guard let longtitue = Double(data.y),
+                      let latitude = Double(data.x) else{
                     return MTMapPoint()
                 }
                 return MTMapPoint(geoCoord: MTMapPointGeo(latitude: longtitue, longitude: latitude))
@@ -58,10 +88,25 @@ struct MainViewModel{
             )
             .asSignal(onErrorSignalWith: .empty())
         
-        self.errorMsg = self.mapViewError
+        self.errorMsg = Observable
+            .merge(self.mapViewError.asObservable(),
+                   cvsLocationDataErrorMsg
+            )
             .asSignal(onErrorJustReturn: "잠시 후 다시 시도")
         
-        self.detailListCellData = Driver.just([])
+        self.detailListCellData = self.documentData
+            .map{
+                model.documentToCellData(data: $0)
+            }
+            .asDriver(onErrorDriveWith: .empty())
+        
+        documentData
+            .map{
+                !$0.isEmpty
+            }
+            .bind(to: self.detailListBackgroundViewModel.shouldHideLabel)
+            .disposed(by: self.bag)
+        
         self.scrollToSeletedLocation = self.selectPOIItem
             .map{
                 $0.tag

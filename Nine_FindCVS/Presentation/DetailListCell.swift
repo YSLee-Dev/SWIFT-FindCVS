@@ -48,7 +48,6 @@ extension DetailListCell{
         self.placeName.snp.makeConstraints{
             $0.leading.equalToSuperview().inset(15)
             $0.top.equalToSuperview().offset(10)
-            $0.trailing.equalTo(self.distance.snp.leading).inset(10)
         }
         
         self.address.snp.makeConstraints{
@@ -58,7 +57,7 @@ extension DetailListCell{
         }
         
         self.distance.snp.makeConstraints{
-            $0.trailing.equalToSuperview().inset(-15)
+            $0.trailing.equalToSuperview().inset(15)
             $0.centerY.equalToSuperview()
         }
     }

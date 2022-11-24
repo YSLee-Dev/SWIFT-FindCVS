@@ -27,16 +27,17 @@
 		343DF78D292CC9E20072702D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343DF78C292CC9E20072702D /* MainViewModel.swift */; };
 		343DF790292CCA550072702D /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 343DF78F292CCA550072702D /* Then */; };
 		343DF793292CCA630072702D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 343DF792292CCA630072702D /* SnapKit */; };
-		343DF796292CCA790072702D /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 343DF795292CCA790072702D /* RxBlocking */; };
 		343DF798292CCA790072702D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 343DF797292CCA790072702D /* RxCocoa */; };
 		343DF79A292CCA790072702D /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 343DF799292CCA790072702D /* RxRelay */; };
 		343DF79C292CCA790072702D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 343DF79B292CCA790072702D /* RxSwift */; };
-		343DF79E292CCA790072702D /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 343DF79D292CCA790072702D /* RxTest */; };
 		343DF7A0292CD0A00072702D /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343DF79F292CD0A00072702D /* MTMapViewError.swift */; };
 		343DF7A2292CD9100072702D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 343DF7A1292CD9100072702D /* XCTest.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		34BAF9C9292E1A3A00658FEB /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9C8292E1A3A00658FEB /* DetailListCell.swift */; };
 		34BAF9CB292E1BFF00658FEB /* DetailListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9CA292E1BFF00658FEB /* DetailListBackgroundView.swift */; };
 		34BAF9CD292E1C0D00658FEB /* DetailListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9CC292E1C0D00658FEB /* DetailListBackgroundViewModel.swift */; };
+		34BAF9D3292F6EB400658FEB /* LocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9D2292F6EB300658FEB /* LocalAPI.swift */; };
+		34BAF9D6292F700700658FEB /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9D5292F700700658FEB /* LocalNetwork.swift */; };
+		34BAF9D8292F723700658FEB /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34BAF9D7292F723700658FEB /* MainModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,6 +80,9 @@
 		34BAF9C8292E1A3A00658FEB /* DetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCell.swift; sourceTree = "<group>"; };
 		34BAF9CA292E1BFF00658FEB /* DetailListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundView.swift; sourceTree = "<group>"; };
 		34BAF9CC292E1C0D00658FEB /* DetailListBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundViewModel.swift; sourceTree = "<group>"; };
+		34BAF9D2292F6EB300658FEB /* LocalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPI.swift; sourceTree = "<group>"; };
+		34BAF9D5292F700700658FEB /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
+		34BAF9D7292F723700658FEB /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +99,7 @@
 				343DF779292B832E0072702D /* DaumMap.framework in Frameworks */,
 				343DF79C292CCA790072702D /* RxSwift in Frameworks */,
 				343DF798292CCA790072702D /* RxCocoa in Frameworks */,
-				343DF796292CCA790072702D /* RxBlocking in Frameworks */,
 				343DF776292B82E90072702D /* QuartzCore.framework in Frameworks */,
-				343DF79E292CCA790072702D /* RxTest in Frameworks */,
 				343DF79A292CCA790072702D /* RxRelay in Frameworks */,
 				343DF774292B82DD0072702D /* SystemConfiguration.framework in Frameworks */,
 				343DF772292B82D10072702D /* OpenGLES.framework in Frameworks */,
@@ -134,6 +136,7 @@
 				343DF71D292B7CD10072702D /* Assets.xcassets */,
 				343DF71F292B7CD10072702D /* LaunchScreen.storyboard */,
 				343DF722292B7CD10072702D /* Info.plist */,
+				34BAF9D4292F6EC100658FEB /* Network */,
 				343DF78B292CC9AC0072702D /* Presentation */,
 				343DF784292CC7E80072702D /* Entities */,
 			);
@@ -171,13 +174,31 @@
 		343DF78B292CC9AC0072702D /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				343DF789292CC97C0072702D /* MainVC.swift */,
-				343DF78C292CC9E20072702D /* MainViewModel.swift */,
+				34BAF9D9292F724100658FEB /* MainVC */,
 				34BAF9C8292E1A3A00658FEB /* DetailListCell.swift */,
 				34BAF9CA292E1BFF00658FEB /* DetailListBackgroundView.swift */,
 				34BAF9CC292E1C0D00658FEB /* DetailListBackgroundViewModel.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		34BAF9D4292F6EC100658FEB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				34BAF9D2292F6EB300658FEB /* LocalAPI.swift */,
+				34BAF9D5292F700700658FEB /* LocalNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		34BAF9D9292F724100658FEB /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				343DF789292CC97C0072702D /* MainVC.swift */,
+				343DF78C292CC9E20072702D /* MainViewModel.swift */,
+				34BAF9D7292F723700658FEB /* MainModel.swift */,
+			);
+			path = MainVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,11 +221,9 @@
 			packageProductDependencies = (
 				343DF78F292CCA550072702D /* Then */,
 				343DF792292CCA630072702D /* SnapKit */,
-				343DF795292CCA790072702D /* RxBlocking */,
 				343DF797292CCA790072702D /* RxCocoa */,
 				343DF799292CCA790072702D /* RxRelay */,
 				343DF79B292CCA790072702D /* RxSwift */,
-				343DF79D292CCA790072702D /* RxTest */,
 			);
 			productName = Nine_FindCVS;
 			productReference = 343DF711292B7CCF0072702D /* Nine_FindCVS.app */;
@@ -270,10 +289,13 @@
 				34BAF9CB292E1BFF00658FEB /* DetailListBackgroundView.swift in Sources */,
 				34BAF9CD292E1C0D00658FEB /* DetailListBackgroundViewModel.swift in Sources */,
 				343DF788292CC9080072702D /* DetailListCellData.swift in Sources */,
+				34BAF9D6292F700700658FEB /* LocalNetwork.swift in Sources */,
 				343DF78A292CC97C0072702D /* MainVC.swift in Sources */,
 				343DF7A0292CD0A00072702D /* MTMapViewError.swift in Sources */,
+				34BAF9D3292F6EB400658FEB /* LocalAPI.swift in Sources */,
 				34BAF9C9292E1A3A00658FEB /* DetailListCell.swift in Sources */,
 				343DF783292CC7DC0072702D /* LocationData.swift in Sources */,
+				34BAF9D8292F723700658FEB /* MainModel.swift in Sources */,
 				343DF786292CC84E0072702D /* KLDocument.swift in Sources */,
 				343DF715292B7CCF0072702D /* AppDelegate.swift in Sources */,
 				343DF717292B7CCF0072702D /* SceneDelegate.swift in Sources */,
@@ -539,11 +561,6 @@
 			package = 343DF791292CCA630072702D /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		343DF795292CCA790072702D /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 343DF794292CCA790072702D /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
 		343DF797292CCA790072702D /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 343DF794292CCA790072702D /* XCRemoteSwiftPackageReference "RxSwift" */;
@@ -558,11 +575,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 343DF794292CCA790072702D /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		343DF79D292CCA790072702D /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 343DF794292CCA790072702D /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -17,7 +17,7 @@ class MainVC : UIViewController{
     let bag = DisposeBag()
     
     let locationManager = CLLocationManager()
-    let mapView = MTMapView().then{
+    var mapView = MTMapView().then{
         $0.currentLocationTrackingMode = .onWithHeadingWithoutMapMoving
     }
     let currentLocationBtn = UIButton().then{
@@ -99,7 +99,8 @@ extension MainVC{
                 self.view.addSubview($0)
             }
         self.mapView.snp.makeConstraints{
-            $0.top.leading.trailing.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
+            $0.top.equalTo(self.view.safeAreaLayoutGuide)
             $0.bottom.equalTo(self.view.snp.centerY).offset(150)
         }
         
@@ -109,7 +110,7 @@ extension MainVC{
         }
         
         self.currentLocationBtn.snp.makeConstraints{
-            $0.bottom.equalTo(self.mapView.snp.bottom).offset(15)
+            $0.bottom.equalTo(self.mapView.snp.bottom).inset(15)
             $0.leading.equalToSuperview().offset(15)
             $0.size.equalTo(40)
         }
@@ -197,6 +198,7 @@ extension Reactive where Base : MainVC{
                     POIItem.mapPoint = point
                     POIItem.markerType = .bluePin
                     POIItem.showAnimationType = .springFromGround
+                    POIItem.draggable = true
                     POIItem.tag = index
                     
                     return POIItem
